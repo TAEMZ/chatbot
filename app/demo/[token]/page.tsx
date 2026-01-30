@@ -20,8 +20,8 @@ interface LeadData {
   assistant_id: string;
   business_data: {
     business_name: string;
-    services: string[];
-    value_proposition: string;
+    services?: string[];
+    value_proposition?: string;
   };
 }
 
@@ -197,7 +197,7 @@ export default function DemoPage({ params }: { params: Promise<{ token: string }
           <div className="w-full md:w-64 bg-slate-50 dark:bg-white/5 p-6 rounded-2xl border border-slate-100 dark:border-slate-800">
             <h3 className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-4">Key Verticals</h3>
             <ul className="space-y-3">
-              {lead.business_data.services.slice(0, 3).map((service, i) => (
+              {(lead.business_data.services || []).slice(0, 3).map((service, i) => (
                 <li key={i} className="text-xs font-bold text-slate-600 dark:text-slate-400 flex items-center gap-2">
                   <div className="w-1.5 h-1.5 rounded-full bg-indigo-500/50" />
                   {service}
