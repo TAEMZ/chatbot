@@ -1,52 +1,50 @@
 export default function Home() {
     return (
-        <div className="min-h-screen flex items-center justify-center bg-[#f8fafc] dark:bg-[#0f172a] transition-colors duration-500 overflow-hidden">
+        <div className="min-h-screen flex flex-col items-center justify-center bg-[#f8fafc] dark:bg-[#0f172a] transition-colors duration-500 overflow-hidden px-4">
             {/* Background Decor */}
-            <div className="fixed inset-0 overflow-hidden pointer-events-none">
-                <div className="absolute top-[20%] left-[10%] w-[50%] h-[50%] bg-indigo-500/10 blur-[130px] rounded-full animate-pulse" />
-                <div className="absolute bottom-[20%] right-[10%] w-[50%] h-[50%] bg-blue-500/10 blur-[130px] rounded-full animate-pulse px-4" />
+            <div className="fixed inset-0 overflow-hidden pointer-events-none opacity-40">
+                <div className="absolute top-[20%] left-[10%] w-[50%] h-[50%] bg-slate-300 blur-[130px] rounded-full animate-pulse" />
+                <div className="absolute bottom-[20%] right-[10%] w-[50%] h-[50%] bg-indigo-500/10 blur-[130px] rounded-full animate-pulse px-4" />
             </div>
 
-            <div className="relative z-10 text-center p-8 max-w-2xl">
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-50 dark:bg-indigo-900/30 border border-indigo-100 dark:border-indigo-800/50 mb-6">
-                    <span className="relative flex h-2 w-2">
-                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-400 opacity-75"></span>
-                        <span className="relative inline-flex rounded-full h-2 w-2 bg-indigo-500"></span>
-                    </span>
-                    <span className="text-xs font-bold text-indigo-600 dark:text-indigo-400 uppercase tracking-widest">Demo Portal v1.0</span>
+            <div className="relative z-10 text-center max-w-2xl w-full">
+                <div className="mb-8 flex justify-center">
+                    <div className="w-20 h-20 bg-white dark:bg-slate-800 rounded-3xl shadow-xl flex items-center justify-center p-4 border border-slate-200 dark:border-slate-700">
+                        <img src="/logo.png" alt="Brownmine Logo" className="max-w-full max-h-full object-contain" />
+                    </div>
                 </div>
 
-                <h1 className="text-5xl md:text-6xl font-extrabold text-slate-900 dark:text-white mb-6 tracking-tight leading-tight">
-                    Personalized <span className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-blue-500">AI Demos</span>
+                <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 mb-6">
+                    <span className="text-[10px] font-bold text-slate-500 dark:text-slate-400 uppercase tracking-[0.2em]">Institutional Intelligence</span>
+                </div>
+
+                <h1 className="text-4xl md:text-5xl font-black text-slate-900 dark:text-white mb-6 tracking-tight">
+                    Brownmine <span className="text-indigo-600 dark:text-indigo-400">Portal</span>
                 </h1>
 
-                <p className="text-lg text-slate-600 dark:text-slate-400 mb-10 leading-relaxed font-medium">
-                    Welcome to the Mant Automations demo portal. Please use your unique access link to view your personalized AI assistant experience.
+                <p className="text-base text-slate-600 dark:text-slate-400 mb-10 leading-relaxed font-medium max-w-lg mx-auto">
+                    Secure interface for localized business intelligence. Access your personalized dashboard using your provided institutional token.
                 </p>
 
-                <div className="bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl p-8 rounded-3xl shadow-2xl border border-slate-200 dark:border-slate-800 max-w-md mx-auto transform hover:scale-[1.02] transition-all duration-300">
-                    <div className="w-12 h-12 bg-indigo-600 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg shadow-indigo-200 dark:shadow-none">
-                        <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.803a4 4 0 015.656 0l4 4a4 4 0 11-5.656 5.656l-1.101-1.101" />
-                        </svg>
-                    </div>
-                    <h2 className="text-xl font-bold text-slate-800 dark:text-slate-200 mb-4">Access Token Required</h2>
-                    <p className="text-sm text-slate-500 dark:text-slate-400 mb-6 leading-relaxed">
-                        Demos are private and require a secure token. Navigate to:
-                    </p>
-                    <div className="bg-slate-50 dark:bg-slate-800/50 p-3 rounded-xl border border-slate-100 dark:border-slate-800 font-mono text-sm text-indigo-600 dark:text-indigo-400 mb-6 select-all">
-                        /demo/[your-token]
+                <div className="bg-white dark:bg-slate-900 p-8 rounded-3xl shadow-xl border border-slate-200 dark:border-slate-800 max-w-sm mx-auto w-full">
+                    <h2 className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-4">Secure Authentication</h2>
+                    <div className="bg-slate-50 dark:bg-slate-800 p-4 rounded-xl border border-slate-100 dark:border-slate-700 font-mono text-xs text-indigo-600 dark:text-indigo-400 mb-6 break-all">
+                        /demo/[access-token]
                     </div>
                     <a
                         href="/demo/test-token-123"
-                        className="inline-flex items-center gap-2 text-sm font-bold text-slate-600 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
+                        className="flex items-center justify-center gap-2 w-full py-3.5 px-6 bg-slate-900 dark:bg-white text-white dark:text-slate-900 rounded-2xl font-bold text-sm hover:opacity-90 transition-all shadow-lg active:scale-95"
                     >
-                        Try example demo
+                        Access Sample Dashboard
                         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                         </svg>
                     </a>
                 </div>
+
+                <p className="mt-8 text-[11px] text-slate-400 dark:text-slate-500 font-bold uppercase tracking-[0.2em]">
+                    © 2026 Brownmine Data Solutions
+                </p>
             </div>
         </div>
     );

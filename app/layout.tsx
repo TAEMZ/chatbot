@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-    title: "Demo Landing Page",
-    description: "AI-powered business demo",
+    title: "Brownmine | Intelligence Portal",
+    description: "Secure institutional business intelligence demos.",
 };
 
 export default function RootLayout({
