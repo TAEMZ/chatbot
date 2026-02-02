@@ -174,7 +174,7 @@ export default function DemoPage({ params }: { params: Promise<{ token: string }
                 {lead.business_data.business_name}
               </h1>
               <p className="text-[9px] md:text-[10px] uppercase font-bold text-indigo-600 dark:text-indigo-400 tracking-[0.2em] truncate">
-                Strategic Dashboard
+                Brownmine Dashboard
               </p>
             </div>
           </div>
