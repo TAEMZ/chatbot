@@ -189,30 +189,6 @@ export default function DemoPage({ params }: { params: Promise<{ token: string }
 
       {/* Main Content */}
       <main className="relative z-10 p-4 md:p-6 max-w-7xl mx-auto pb-24 md:pb-6">
-        {/* Strategy Context Card - Responsive layout */}
-        <div className="mb-6 md:mb-8 bg-white dark:bg-slate-900 p-6 md:p-8 rounded-[1.5rem] md:rounded-3xl border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col md:flex-row gap-6 md:gap-8 items-start">
-          <div className="flex-1">
-            <div className="flex items-center gap-2 mb-3 md:mb-4">
-              <div className="w-2 h-2 rounded-full bg-indigo-600" />
-              <h2 className="text-[10px] md:text-[11px] font-black text-slate-400 uppercase tracking-[0.2em]">Operational Overview</h2>
-            </div>
-            <p className="text-base md:text-lg text-slate-700 dark:text-slate-300 font-medium leading-relaxed">
-              {lead.business_data.value_proposition}
-            </p>
-          </div>
-          <div className="w-full md:w-64 bg-slate-50 dark:bg-white/5 p-5 md:p-6 rounded-2xl border border-slate-100 dark:border-slate-800 shrink-0">
-            <h3 className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-4">Key Verticals</h3>
-            <ul className="space-y-3">
-              {(lead.business_data.services || []).slice(0, 3).map((service, i) => (
-                <li key={i} className="text-xs font-bold text-slate-600 dark:text-slate-400 flex items-center gap-2">
-                  <div className="w-1.5 h-1.5 rounded-full bg-indigo-500/50" />
-                  {service}
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-
         {/* Website Preview Window - Responsive height */}
         <div className="bg-slate-900 rounded-[1.5rem] md:rounded-[2.5rem] shadow-2xl border border-slate-200 dark:border-slate-800 overflow-hidden transform transition-all mb-8">
           {/* Browser Top Bar */}
